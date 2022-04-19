@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "345a8908-aa4c-485d-aa49-a3f1a6f118af",
+		"name": "TestSocksProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddSocks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"color\":\"blue\",  \"cottonPart\":70,\"quantity\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/socks/income",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"socks",
+						"income"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DelSocks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"color\":\"blue\",  \"cottonPart\":70,\"quantity\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/socks/outcome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"socks",
+						"outcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCountSocks_moreThen",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/socks?color=blue&operation=moreThan&cottonPart=50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"socks"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": "blue"
+						},
+						{
+							"key": "operation",
+							"value": "moreThan"
+						},
+						{
+							"key": "cottonPart",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCountSocks_lesThen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/socks?color=blue&operation=lessThan&cottonPart=80",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"socks"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": "blue"
+						},
+						{
+							"key": "operation",
+							"value": "lessThan"
+						},
+						{
+							"key": "cottonPart",
+							"value": "80"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCountSocks equal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/socks?color=blue&operation=equal&cottonPart=70",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"socks"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": "blue"
+						},
+						{
+							"key": "operation",
+							"value": "equal"
+						},
+						{
+							"key": "cottonPart",
+							"value": "70"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
